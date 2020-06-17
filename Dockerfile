@@ -2,6 +2,7 @@ FROM centos/ruby-25-centos7
 USER default
 EXPOSE 8080
 COPY combined_dodcertbundle.pem /etc/pki/ca-trust/source/anchors/
+USER root
 RUN chmod 644 /etc/pki/ca-trust/source/anchors/combined_dodcertbundle.pem && /usr/bin/update-ca-trust
 ENV RACK_ENV production
 ENV RAILS_ENV production
