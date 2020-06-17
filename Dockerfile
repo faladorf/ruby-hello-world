@@ -1,4 +1,5 @@
 FROM centos/ruby-25-centos7
+MAINTAINER Matt T. 
 USER default
 EXPOSE 8080
 COPY combined_dodcertbundle.pem /etc/pki/ca-trust/source/anchors/
